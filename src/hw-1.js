@@ -6,6 +6,12 @@ function task1(num1, num2, str) {
   let sum = null;
   // ваш код должен быть ниже этой строки
 
+  if (typeof str === 'string') {
+    sum = 'неверные данные';
+  } else {
+    sum = num1 + num2 + str;
+  }
+
   // ваш код должен быть выше этой строки
   return sum;
 }
@@ -29,7 +35,28 @@ function task1(num1, num2, str) {
 function task2(age) {
   let result = null;
   // ваш код должен быть ниже этой строки
-
+  switch (age) {
+    case 5:
+    case 6:
+    case 7:
+      result = 'Он старше 5 лет';
+      break;
+    case 8: 
+    case 9:
+    case 10:
+      result = 'Он старше 8 лет';
+      break;
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+    case 16:  
+      result = 'Он старше 11 лет';
+      break;
+    default:
+      result = 'Нет подходящего возраста';
+  }
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -41,7 +68,13 @@ function task2(age) {
 function task3() {
   let result = 0;
   // ваш код должен быть ниже этой строки
-
+  let f = 0;
+  while (f <= 21) {
+    if (f % 2 !== 0) {
+      result += f;
+    }
+    f++;
+  }
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -53,7 +86,10 @@ function task3() {
  */
 function task4() {
   // ваш код должен быть ниже этой строки
-
+  for (let b = 0; b <= 100; b++)
+    if (b % 5 == 0) {
+    console.log(5);
+    }
   // ваш код должен быть выше этой строки
 }
 
@@ -63,7 +99,9 @@ function task4() {
  */
 function task5(num, str, bool, val) {
   let result = num || str || bool || val; // выражение с || менять нельзя, остальное в ваших руках
-
+  if (num !== undefined) {
+    result = true;
+  }
   return result;
 }
 
@@ -76,9 +114,9 @@ function task6(number) {
   for (let i = 0; i < 10; i++) {
     for (let j = 0; j < 10; j++) {
       // ваш код должен быть ниже этой строки
-
+      if (number > result + i +j) {
       result += i + j;
-
+      } else {result = undefined}
       // ваш код должен быть выше этой строки
     }
   }
@@ -95,7 +133,55 @@ function task6(number) {
 function task7() {
   let result = null;
   // ваш код должен быть ниже этой строки
-
+  let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'v') {
+      result = alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'i') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'k') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 't') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'o') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'r') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'i') {
+      result += alphabet[j];
+      break;
+    }
+  }
+  for (let j = 0; j <= alphabet.length; ++j) {
+    if (alphabet[j] = 'a') {
+      result += alphabet[j];
+      break;
+    }
+  }
   // ваш код должен быть выше этой строки
   return result;
 }
