@@ -168,3 +168,15 @@ function task9() {
   // ваш код должен быть выше этой строки
   return array;
 }
+
+function fb(t) {
+  let fibonacci = [1, 1];
+  if (t <= 2) {
+    return fibonacci.slice(0, t);
+  } else {
+      for (i = 0; i < t - 2; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]);
+    }
+  }
+  return fibonacci;
+}
