@@ -74,14 +74,7 @@ function task4(obj) {
 function task5(obj1, obj2) {
   let result = null;
   // ваш код должен быть ниже этой строки
-  obj1 = {
-    a: 1,
-    b: 2,
-  }
-  obj2 = {
-    a: 1,
-  }
-  let count = 0;
+  /* let count = 0;
   for (let key in obj1) {
     count++;
 }
@@ -89,11 +82,30 @@ function task5(obj1, obj2) {
   for (let key in obj2) {
     check++;
   }
-  count > check ? result = 1 : result = 2;
+  count > check ? result = 1 : result = 2; */
+
+  if (Object.values(obj1).length > Object.values(obj2).length) { // values
+    result = 1;
+  } else {
+    result = 2;
+  }
+
+  /* if (Object.keys(obj1).length > Object.keys(obj2).length) {
+    result = 1;
+  } else {
+    result = 2;
+  } */
+
   // ваш код должен быть выше этой строки
   return result;
 }
-
+user1 = {
+  h: 2,
+}
+user2 = {
+  j: 1,
+  k: 2,
+}
 /**
  * Написать логику, которая должна удалять все свойства из объекта obj.
  */
@@ -142,14 +154,8 @@ function task7(obj) {
 function task8(obj, str) {
   let result = null;
   // ваш код должен быть ниже этой строки
-  obj = {
-    hello: 'Hello, ',
-  };
-  str = 'Vitalik';
-  function SayHi () {
-    result = obj.hello + str;
-  }
-  SayHi();
+  obj.hello = 'Hello, ',
+  result = obj.hello + str;
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -159,12 +165,15 @@ function task8(obj, str) {
  * Все аргументы функции должны добавляться в массив.
  */
 function task9() {
-  const array = [];
+  let array = [];
   // ваш код должен быть ниже этой строки
   
-  for (let i = 0; i < arguments.length; i++) {
-  array[i] = arguments[i];
-}
+  /* for (let i = 0; i < arguments.length; i++) {
+  array[i] = arguments[i]; 
+  } */
+
+  array = [...arguments];
+
   // ваш код должен быть выше этой строки
   return array;
 }
