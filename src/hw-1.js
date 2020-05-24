@@ -5,8 +5,7 @@
 function task1(num1, num2, str) {
   let sum = null;
   // ваш код должен быть ниже этой строки
-
-  if (typeof str === 'string') {
+  if (isNaN(str) === true) {
     sum = 'неверные данные';
   } else {
     sum = num1 + num2 + str;
@@ -133,7 +132,35 @@ function task6(number) {
 function task7() {
   let result = null;
   // ваш код должен быть ниже этой строки
-  let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+  let alphabet = {1: "a", 2: "b", 3: "c", 4: "d", 5: "e", 6: "f", 7: "g", 8: "h", 9: "i", 10: "j", 11: "k", 12: "l", 13: "m", 14: "n", 15: "o", 16: "p", 17: "q", 18: "r", 19: "s", 20: "t", 21: "u", 22: "v", 23: "w", 24: "x", 25: "y", 26: "z"};
+  for (key in alphabet) {
+    
+    if (alphabet[key] = 'v') {
+      result = alphabet[key];
+    }
+    if (alphabet[key] = 'i') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 'k') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 't') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 'o') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 'r') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 'i') {
+      result += alphabet[key];
+    }
+    if (alphabet[key] = 'a') {
+      result += alphabet[key];
+    }
+  }
+  /* let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   for (let j = 0; j <= alphabet.length; ++j) {
     if (alphabet[j] = 'v') {
       result = alphabet[j];
@@ -181,7 +208,7 @@ function task7() {
       result += alphabet[j];
       break;
     }
-  }
+  } */
   // ваш код должен быть выше этой строки
   return result;
 }
