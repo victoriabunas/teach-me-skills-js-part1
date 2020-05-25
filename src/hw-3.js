@@ -7,7 +7,12 @@
  *  "Aaret64ip" => true
  */
 function task1(str) {
-
+  for (let i = 0; i < str.length; i++) {
+    if (str.split(str[i]).length - 1 > 1) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -16,8 +21,12 @@ function task1(str) {
  */
 function task2(str) {
   let result = '';
-
-
+  let user = [...str];
+  for (let i = 0; i < user.length; i++) {
+    if (isNaN(user[i]) === true) {
+      result += user[i];
+    } else continue;
+  }
   return result;
 }
 
@@ -25,16 +34,16 @@ function task2(str) {
  * arr массив чисел. Нужно найти в массиве найбольшое число и вернуть его
  */
 function task3(arr) {
-
+  return Math.max(...arr);
 }
 
 /**
  * В функцию приходит объект obj. Нужно скопировать все его свойства в объект result и вернуть его
  */
 function task4(obj) {
-  const result = {};
+  let result = {};
   // ваш код должен быть ниже этой строки
-
+  result = {...obj};
   // ваш код должен быть выше этой строки
   return result;
 }
@@ -45,7 +54,16 @@ function task4(obj) {
  * Еще пример: str => "Vitalik Skopets". result => "V.S."
  */
 function task5(str) {
-
+  let result = '';
+  for (i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      result += str[i];
+    }
+  }
+  result += ' ';
+  let NewResult = result.replace(' ', '.');
+  let NewNewResult = NewResult.replace(' ', '.');
+  return NewNewResult;
 }
 
 /**
@@ -53,12 +71,16 @@ function task5(str) {
  * Примечание: написать эту логику без if и switch!!!!!!!
  */
 function task6(num) {
-
+  const PlanetNames = [0, 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер', 'Сатурн', 'Уран', 'Нептун', 'Плутон'];
+  return PlanetNames[num];
 }
 
 /**
  * Функция должна удалять первый и последний символы из строки str и вернуть получившеюся строку.
  */
 function task7(str) {
-
+  let user = [...str];
+  user.shift();
+  user.pop();
+  return user.join('');
 }
