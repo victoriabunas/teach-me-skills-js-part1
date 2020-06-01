@@ -21,11 +21,10 @@ function task1(str) {
  */
 function task2(str) {
   let result = '';
-  let user = [...str];
-  for (let i = 0; i < user.length; i++) {
-    if (isNaN(user[i]) === true) {
-      result += user[i];
-    } else continue;
+  for (let i = 0; i < str.length; i++) {
+    if (isNaN(str[i]) === true) {
+      result += str[i];
+    }
   }
   return result;
 }
@@ -71,7 +70,18 @@ function task5(str) {
  * Примечание: написать эту логику без if и switch!!!!!!!
  */
 function task6(num) {
-  const PlanetNames = [0, 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер', 'Сатурн', 'Уран', 'Нептун', 'Плутон'];
+  //const PlanetNames = [0, 'Меркурий', 'Венера', 'Земля', 'Марс', 'Юпитер', 'Сатурн', 'Уран', 'Нептун', 'Плутон'];
+  const PlanetNames = {
+    1: 'Меркурий', 
+    2: 'Венера', 
+    3: 'Земля', 
+    4: 'Марс', 
+    5: 'Юпитер', 
+    6: 'Сатурн', 
+    7: 'Уран', 
+    8: 'Нептун', 
+    9: 'Плутон',
+  }
   return PlanetNames[num];
 }
 
