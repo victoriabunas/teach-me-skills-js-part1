@@ -46,8 +46,8 @@ function task2(num) {
 function task3(obj, property) {
   let result = null;
   // ваш код должен быть ниже этой строки
-  obj = {};
-  result = obj.hasOwnProperty('property');
+  result = obj.hasOwnProperty(property);
+  //result = !!obj[property];
   // ваш код должен быть выше этой строки
   return result;
 }
