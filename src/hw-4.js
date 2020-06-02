@@ -54,20 +54,30 @@ console.log(array3);
 /**
  * Написать свою функцию indexOf
  */
-function indexOf(array, value, fromIndex) {
-  let index = null;
-  for (const key in array) {
-    if (value === array[key]) {
-      index = key;
+function indexOf(array, value, fromIndex = 0) {
+  /* if (fromIndex < 0) {
+    for (let i = array.length + fromIndex; i < array.length; i++) {
+      if (value === array[i]) {
+        return i;
+      }
     }
-  }
-  if (fromIndex > index) {
-    index = -1;
-  } 
-  return index;
+  } else if (fromIndex < array.length) {
+      for(let n = 0; n < array.length; n++) {
+        if (n > fromIndex) {
+          return n;
+        }
+      }
+  } return -1; */
+  let index = fromIndex < 0 ? array.length + fromIndex : fromIndex;
+    for (; index < array.length; index++) {
+      if (value === array[index]) {
+        return index;
+      }
+    }
+    return -1;
 }
 
-const array4 = indexOf(['a', 'b', 'c', 'd', 'e', 'f'], 'e', 0);
+const array4 = indexOf(['a', 'b', 'c', 'd', 'e', 'f'], 'f', 6);
 console.log(array4);
 
 /**
